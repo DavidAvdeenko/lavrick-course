@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="../bootstrap.min.css">
+   <link rel="stylesheet" href="../main.css">
+   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div id="sample">
+         <input type="text" v-model.trim="firstName">
+         <input type="text" v-model.trim="lastName">
+         <hr>
+         <h2>Hello, {{ fullName }}</h2>
+         <button class="btn btn-success" type="button" @click="showAlert = !showAlert"> Toggle Alert</button>
+         <div class="alert alert-danger mt-3" v-show="showAlert">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, amet!
+         </div>
+      </div>
+   </div>
+   <script src="./index.js">
+
+   </script>
+
+</body>
+
+</html>

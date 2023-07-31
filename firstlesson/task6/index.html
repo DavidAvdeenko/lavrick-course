@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Урок 1</title>
+   <link rel="stylesheet" href="../bootstrap.min.css">
+   <link rel="stylesheet" href="../main.css">
+
+   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="sample">
+         <button type="button" class="btn btn-primary" @click="add">Add number</button>
+         <hr>
+         <ul class="list-group">
+            <li v-for="num,i in numbers" class="list-group-item" @mouseenter="double(i)">
+               #{{ i }} / {{ num }}
+            </li>
+         </ul>
+      </div>
+   </div>
+   <script>
+      const { createApp } = Vue
+      createApp({
+         data() {
+            return {
+               numbers: []
+            }
+         },
+         methods: {
+            add() {
+               this.numbers.push(Math.random());
+            },
+            double(i) {
+               this.numbers[i] *= 2;
+            }
+         }
+      }).mount('.sample');
+   </script>
+</body>
+
+</html>

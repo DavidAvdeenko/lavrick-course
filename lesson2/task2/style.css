@@ -1,0 +1,16 @@
+body {
+   padding: 50px;
+}
+
+.my-success {
+   font-style: italic;
+}
+
+.other-warning {
+   font-weight: bold;
+}
+
+.table-some {
+   color: #fff;
+   background: #000;
+}
